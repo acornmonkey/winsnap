@@ -1,0 +1,25 @@
+#!/bin/bash
+p=$1
+if [ $1 = "right" ]
+	then
+		p=51
+fi
+if [ $1 = "left" ]
+	then
+		p=0
+fi
+d=91
+s=49
+n=`xdotool getactivewindow getwindowname`
+if [[ "$n" == *" - Google Chrome"* ]]
+	then
+		d=96
+		s=50
+		if [ $1 = "right" ]
+			then
+				p=50
+		fi
+fi
+wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
+xdotool getactivewindow windowsize $s% $d%
+xdotool getactivewindow windowmove $p% 0%
