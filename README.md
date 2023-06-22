@@ -11,3 +11,4 @@ Window-snapping for X11
 * wmctrl
 * xdotool
 * xprop
+* grep
