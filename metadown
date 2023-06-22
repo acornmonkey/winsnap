@@ -1,0 +1,7 @@
+#!/bin/bash
+if [[ `xprop -id $(xdotool getactivewindow)|grep "_NET_WM_STATE(ATOM)"` == *"MAXIMIZED"* ]]
+	then
+		wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
+	else
+		xdotool getactivewindow windowminimize
+fi
