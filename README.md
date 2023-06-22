@@ -4,7 +4,7 @@ Window-snapping for X11
 * Meta+Left: xwinsnap left
 * Meta+Right: xwinsnap right
 * Meta+Up: wmctrl -r :ACTIVE -b add,maximized_vert,maximized_horz
-* Meta+Up: xmetadown
+* Meta+Down: xmetadown
 ## Dependencies
 * X11
 * bash
