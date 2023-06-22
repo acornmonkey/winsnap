@@ -10,5 +10,5 @@ Window-snapping for X11
 * bash
 * wmctrl
 * xdotool
-* xprop
-* grep
+* xprop (xmetadown only)
+* grep (xmetadown only)
