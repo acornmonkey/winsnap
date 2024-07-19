@@ -1,25 +1,30 @@
 #!/bin/bash
-p=$1
+c=$1
 if [ $1 = "right" ]
 	then
-		p=51
+		c=51
 fi
 if [ $1 = "left" ]
 	then
-		p=0
+		c=0
 fi
-d=91
-s=49
+b=91
+a=49
+d=0
 n=`xdotool getactivewindow getwindowname`
-if [[ "$n" == *" - Google Chrome"* ]]
+if [[ "$n" == *" - Google Chrome"* ]] || [[ "$n" == *" - Chromium"* ]]
 	then
-		d=96
-		s=50
+		b=96
+		a=50
 		if [ $1 = "right" ]
 			then
-				p=50
+				c=50
 		fi
 fi
+if [[ "$n" == *" - LibreOffice" ]]
+	then
+		d=3
+fi
 wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
-xdotool getactivewindow windowsize $s% $d%
-xdotool getactivewindow windowmove $p% 0%
+xdotool getactivewindow windowsize $a% $b%
+xdotool getactivewindow windowmove $c% $d%
