@@ -19,6 +19,7 @@ fi
 if [[ "$n" == *" - LibreOffice"* ]]
 	then
 		d=3
+		b=93
 fi
 wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
 xdotool getactivewindow windowsize $a% $b%
