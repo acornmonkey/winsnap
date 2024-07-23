@@ -16,7 +16,7 @@ if [[ "$n" == *" - Google Chrome"* ]] || [[ "$n" == *" - Chromium"* ]]
 	then
 		b=96
 fi
-if [[ "$n" == *" - LibreOffice" ]]
+if [[ "$n" == *" - LibreOffice"* ]]
 	then
 		d=3
 fi
